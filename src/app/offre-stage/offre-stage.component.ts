@@ -9,6 +9,7 @@ import {Offre} from '../model/offre';
 
 export class OffreStageComponent implements OnInit {
   show: boolean;
+  title: string;
   listOffre: Offre[];
   constructor() { }
 
@@ -21,7 +22,7 @@ export class OffreStageComponent implements OnInit {
     this.show = false;
   }
 
-  bilan() {
+  bilan(): number {
     let count = 0;
     for (const i in this.listOffre) {
       if (this.listOffre[i].etat) {
