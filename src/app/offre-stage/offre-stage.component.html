@@ -1,3 +1,11 @@
+<div class="p-5">
+  <button class="btn btn-success" (click)="bilan()">
+    Bilan
+  </button>
+  <div class="alert alert-primary mt-3" *ngIf="show">
+    Offers count : {{bilan()}}
+  </div>
+</div>
 <table class="table">
   <tr>
     <th>Ref</th>
@@ -16,7 +24,7 @@
       {{o.entreprise}}
     </td>
     <td>
-      <button class="btn btn-info">
+      <button class="btn btn-info" [disabled]="!o.etat">
         Submit
       </button>
     </td>
