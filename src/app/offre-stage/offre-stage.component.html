@@ -1,8 +1,9 @@
-<table>
+<table class="table">
   <tr>
     <th>Ref</th>
     <th>Titre</th>
     <th>Entreprise</th>
+    <th>Options</th>
   </tr>
   <tr *ngFor="let o of listOffre">
     <td>
@@ -11,6 +12,13 @@
     <td>
       {{o.titre}}
     </td>
+    <td>
+      {{o.entreprise}}
+    </td>
+    <td>
+      <button class="btn btn-info">
+        Submit
+      </button>
+    </td>
   </tr>
 </table>
-
